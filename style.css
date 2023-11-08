@@ -11,6 +11,10 @@ body {
 }
 
 h1 {
-  color: blue;
-  font-weight: 600px;
+  color:darkslateblue;
+  font-weight: 600;
+}
+
+h2 {
+  color: midnightblue;
 }
