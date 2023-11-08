@@ -1,9 +1,16 @@
+/* style.css */
 body {
-    background-color: red !important;
-  }
-  h1 {
-    color: blue;
-  }
-  p {
-    color: red;
-  }
+  background-color: rgb(241, 241, 241);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:30vh;
+  margin: 0;
+}
+
+h1 {
+  color: blue;
+  font-weight: 600px;
+}
