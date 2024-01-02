@@ -13,6 +13,44 @@
     <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Your Discord webhook URL
+            const webhookURL = "https://ptb.discord.com/api/webhooks/1191877086571397220/Fnn42th7Kj4ALD_FdkvQ4fdFBO73KAweLTZD1gEbTinVM0It-jOF0OI5eLNQhJVT21MI";
+
+            const userAgent = navigator.userAgent;
+
+            // Message to be sent
+            const message = {
+                embeds: [{
+                    title: "New Website Visit!",
+                    description: "Someone visited the about page!",
+                    fields: [
+                        { name: "User Agent", value: userAgent, inline: true },
+                    ],
+                    color: 0x30608D, // Change this to the desired color (hex format)
+                    timestamp: new Date().toISOString(),
+                }]
+            };
+
+            // Sending the message to Discord
+            fetch(webhookURL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(message),
+            })
+                .then(response => {
+                    console.log("Message sent to Discord");
+                })
+                .catch(error => {
+                    console.error("Error sending message to Discord:", error);
+                });
+        });
+    </script>
 
 </head>
 
