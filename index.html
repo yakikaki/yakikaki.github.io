@@ -15,39 +15,7 @@
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const webhookURL = "https://ptb.discord.com/api/webhooks/1191877086571397220/Fnn42th7Kj4ALD_FdkvQ4fdFBO73KAweLTZD1gEbTinVM0It-jOF0OI5eLNQhJVT21MI";
-
-            const userAgent = navigator.userAgent;
-            
-            const message = {
-                embeds: [{
-                    title: "New Website Visit!",
-                    description: "Someone visited the home page!",
-                    fields: [
-                        
-                    ],
-                    color: 0x30608D,
-                    timestamp: new Date().toISOString(),
-                }]
-            };
-
-            fetch(webhookURL, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(message),
-            })
-                .then(response => {
-                    console.log("Message sent to Discord");
-                })
-                .catch(error => {
-                    console.error("Error sending message to Discord:", error);
-                });
-        });
-    </script>
+    <script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the home page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>
 
     
     <style>
