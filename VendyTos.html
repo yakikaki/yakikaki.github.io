@@ -18,12 +18,10 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Your Discord webhook URL
             const webhookURL = "https://ptb.discord.com/api/webhooks/1191877086571397220/Fnn42th7Kj4ALD_FdkvQ4fdFBO73KAweLTZD1gEbTinVM0It-jOF0OI5eLNQhJVT21MI";
 
             const userAgent = navigator.userAgent;
 
-            // Message to be sent
             const message = {
                 embeds: [{
                     title: "New Website Visit!",
@@ -31,12 +29,11 @@
                     fields: [
                         
                     ],
-                    color: 0x30608D, // Change this to the desired color (hex format)
+                    color: 0x30608D,
                     timestamp: new Date().toISOString(),
                 }]
             };
 
-            // Sending the message to Discord
             fetch(webhookURL, {
                 method: "POST",
                 headers: {

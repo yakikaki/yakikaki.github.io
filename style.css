@@ -88,7 +88,7 @@ p {
 .projectsContainer {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Add spacing between h1 and the project blocks */
+  gap: 20px;
 }
 
 .projectBlock {
@@ -105,7 +105,7 @@ p {
 }
 
 .projectImage {
-  width: 100%; /* Stretch the image to the full width of the block */
+  width: 100%; 
   height: 100%;
 }
 
