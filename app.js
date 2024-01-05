@@ -1,4 +1,3 @@
-// app.js
 document.addEventListener("DOMContentLoaded", function () {
     // Initial load
     loadContent("index");
