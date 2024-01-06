@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="this site serves minimal purpose.">
+    <meta name="keywords" content="Gaming, Game Development, Studio">
+    <meta name="author" content="Yakov Iron">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vendy Bot | YakiKaki</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vendy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="./" class="logo"><img src= "../assets/PlainLogo.png"></a>
+        <div class="nav-container">
+            <nav class="main-nav navbar"> 
+                <a href="./">Store</a>
+                <a href="./">Community</a>
+                <a href="projects">Projects</a>
+                <a href="ironengine">IronEngine</a>
+            </nav>
+    
+            <nav class="second-nav">
+                <a href="#home">Home</a>
+                <a href="#stats">Stats</a>
+                <a href="#features">Features</a>
+                <a href="#invite">Invite</a>
+            </nav>
+
+            <div class="expand-btn" id="expand-btn" onclick="toggleOptions()"></div>
+        </div>
+    </header> 
+    <!-- Main Content -->
+    < class="section" id="home">
+    
+        <h1>Vendy Bot</h1>
+        <img src= "../assets/bot.png">
+        <h2>A Discord bot full of fears and phobies essentials!</h2>
+        <div class="mainButtons" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <a href="https://www.buymeacoffee.com/YakiKaki">
+                <button type="button" style="background-color: #5F7FFF; border-radius: 20px; color: #FFFFFF; padding: 20px 40px; cursor: pointer; border: none; font-family:Arial; font-weight:bolder; font-size:medium">☕ Support Me</button>
+            </a> 
+            <a href="https://discord.com/oauth2/authorize?client_id=736539931828289587&scope=bot&permissions=8">
+                <button type="button" style="background-color: #5F7FFF; border-radius: 20px; color: #FFFFFF; padding: 20px 40px; cursor: pointer; border: none; font-family:Arial; font-weight:bolder; font-size:medium">👁️ Invite The Bot</button>
+            </a>
+        </div>
+        <div class="footerBottom">
+            <p>All rights to phobies and its assets, Vendy name and picture belong to Smoking Gun Interactive Inc</span></p>
+        </div>
+    </div>
+
+    <div class="section" id="stats">
+        <!-- Content for Stats Section -->
+        <h1>Statistics</h1>
+    </div>
+
+    <div class="section" id="features">
+        <!-- Content for Features Section -->
+        <h1>Features</h1>
+    </div>
+
+    <div class="section" id="invite">
+        <!-- Content for Invite Section -->
+        <h1>Invite to your server!</h1>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.twitter.com/yakikaki69/"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/yakikaki_/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UC7vtYQkWnHMOxuHxsWvjo9g"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.discord.gg/hFUX6R2kuU"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <div class="footerNav">
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2022-2023 <span class="company">YakiStudios</span></p>
+            </div>
+            <div class="socialIcons">
+                <a href="mailto:businessyakikaki@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <span style="color: white; margin-top: 30px"><a href="mailto:businessyakikaki@gmail.com" style="background-color:transparent; color:white">Contact</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleOptions() {
+            const navbar = document.querySelector('.nav-container');
+            const expandBtn = document.getElementById('expand-btn');
+
+            navbar.classList.toggle('expanded');
+            expandBtn.innerHTML = navbar.classList.contains('expanded') ? 'Less' : 'More';
+
+            const secondNav = document.querySelector('.second-nav');
+            secondNav.style.opacity = navbar.classList.contains('expanded') ? '1' : '0';
+            secondNav.style.pointerEvents = navbar.classList.contains('expanded') ? 'auto' : 'none';
+
+            const mainNav = document.querySelector('.main-nav');
+            mainNav.style.opacity = navbar.classList.contains('expanded') ? '1' : '1';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.second-nav a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    const navbar = document.querySelector('.nav-container');
+                    navbar.classList.remove('expanded');
+                    const expandBtn = document.getElementById('expand-btn');
+                    expandBtn.innerHTML = 'More';
+
+                    const secondNav = document.querySelector('.second-nav');
+                    secondNav.style.opacity = '0';
+                    secondNav.style.pointerEvents = 'none';
+
+                    const mainNav = document.querySelector('.main-nav');
+                    mainNav.style.opacity = '1';
+                });
+            });
+
+            const expandBtn = document.getElementById('expand-btn');
+            expandBtn.innerHTML = 'More';
+            expandBtn.style.color = '#000';
+            expandBtn.style.marginRight = '5px';
+        });
+
+        document.querySelector('.second-nav').style.opacity = '0';
+        document.querySelector('.second-nav').style.pointerEvents = 'none';
+    </script>
+</body>
+
+</html>
+
+
+   <!--<script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the Vendy page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>
