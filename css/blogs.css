@@ -22,7 +22,7 @@
 
 .text-container {
   padding: 0 20px;
-  text-align: justify;
+  text-align: start;
 }
 
 .blog-timestamp {
