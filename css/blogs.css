@@ -15,9 +15,20 @@
   margin-top: 5%;
 }
 
+.blog-content li {
+  color: white;
+  font-weight: lighter;
+}
+
 .text-container {
   padding: 0 20px;
   text-align: justify;
+}
+
+.blog-timestamp {
+  font-size: 9px;
+  color: lightgray;
+  font-weight: lighter;
 }
 
 .text-container p {
