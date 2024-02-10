@@ -1,0 +1,15 @@
+@font-face {
+    font-family: leaguespartan;
+    src: url(../assets/league-spartan-font/leaguespartan-bold.ttf);
+}
+
+@font-face {
+    font-family: leaguespartan-light;
+    src: url(../assets/league-spartan-font/leaguespartan-light.ttf);
+}
+
+
+@font-face {
+    font-family: leaguespartan-regular;
+    src: url(../assets/league-spartan-font/LeagueSpartan-Regular.ttf);
+}

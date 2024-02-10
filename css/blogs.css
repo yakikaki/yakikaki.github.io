@@ -1,0 +1,25 @@
+.big-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block; 
+  margin-bottom: 20px; 
+  max-height: 240px;
+}
+
+.blog-content {
+  display: flex;
+  display: block;
+  justify-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.text-container {
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.text-container p {
+  font-family: leaguespartan-regular;
+}
+
