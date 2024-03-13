@@ -6,30 +6,32 @@
     <meta name="description" content="this site serves minimal purpose.">
     <meta name="keywords" content="Gaming, Game Development, Studio">
     <meta name="author" content="Yakov Iron">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     
-    <title>Tools by YakiKaki</title>
     
     <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
-    <link rel="stylesheet" href="/css/blogs.css">
+
+    <link rel="stylesheet" href="/css/rttexconverter.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
-    
-    <script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the Tools page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>
-
-
+    <!--<script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the home page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>-->
 </head>
 
 <body>
+    <title>Yaki's Tools | Text Encoder/Decoder</title>
+
+    </body>   
     <!-- HEADER -->
     <header class="header">
-        
-        <a href="./" ><img src= "assets/PlainLogo.png" class="nav-logo"></a>
+        <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
         <nav class="navbar">
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -53,51 +55,27 @@
         </nav>
     <script src="/javascript/responsive-header.js"></script>
     </header> 
-
-    <div class="center-container">  
-    <h1><span style="font-size: larger;">Tools</h1>
+    <span style="margin-top: 5%;"></span>
+    <h1>RTTEX To PNG</h1>
+    <span style="margin-top: 3%;"></span>
+    <div id="QnA" style="text-align: left;">
+        <h2>What are .rttex files?</h2>
         <br>
-    <h2>This page showcases all of the tools created by YakiKaki!</h2>
-    <br>
-    <br>
-    <div class="projectsContainer">
-        <!-- Tools Block 1 -->
-        <a href="tools/planning-board">
-            <div class="projectBlock">
-                <img src="assets/NoImage.png" alt="Project Image" class="projectImage" style="max-width: 100%">
-                <div class="projectContent">
-                    <div class="projectTitle">Planning Board</div>
-                    <div class="projectDescription">A Simple planning board used to manage projects</div>
-                </div>
-            </div>
-        </a>
-
-
-        <!-- Tools Block 2 -->
-        <a href="tools/text-encoder-decoder">
-            <div class="projectBlock">
-                <img src="assets/NoImage.png" alt="Project Image" class="projectImage" style="max-width: 100%">
-                <div class="projectContent">
-                    <div class="projectTitle">Text Encoder/Decoder</div>
-                    <div class="projectDescription">Encode or Decode text into various encryption types!</div>
-                </div>
-            </div>
-        </a>
-
-        <!-- Tools Block 3 -->
-        <a href="tools/rttex-to-png">
-            <div class="projectBlock">
-                <img src="assets/NoImage.png" alt="Project Image" class="projectImage" style="max-width: 100%">
-                <div class="projectContent">
-                    <div class="projectTitle">RTTEX Converter</div>
-                    <div class="projectDescription">Convert RTTEX files to PNGs or PNGs to RTTEX files!</div>
-                </div>
-            </div>
-        </a>
-
+        <p>- '.rttex' files are encrypted image files for the open sourced <a href="https://github.com/SethRobinson/proton">ProtonSDK</a> made by Seth a Robinson.</p>
     </div>
+
     
-    </div>
+    <span style="margin-top: 3%;"></span>
+    <input type="file" id="fileinput" style="display: none;">
+    <button onclick="clickFile()">Choose RTTEX File</button>
+    <br>
+    <label style="color: white;">
+        <input type="checkbox" id="rt_toggle"> PNG -> RTTEX
+    </label>
+    <canvas id="canvas"></canvas>
+    <div id="result"></div>
+    <br>
+    <button onclick="save()">Save as PNG</button>
     <!-- FOOTER -->
     <footer>
         <div class="footerContainer">
@@ -106,8 +84,9 @@
                 <a href="https://www.instagram.com/yakikaki_/"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.youtube.com/channel/UC7vtYQkWnHMOxuHxsWvjo9g"><i class="fa-brands fa-youtube"></i></a>
                 <a href="https://www.discord.gg/hFUX6R2kuU"><i class="fa-brands fa-discord"></i></a>
-            </div>
+            </div>  
 
+           
             <div class="footerNav">
             </div>
             
@@ -119,5 +98,12 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="/javascript/rttex-converter.js"></script>
+    
 </body>
 </html>
+
+
+
