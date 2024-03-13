@@ -7,8 +7,8 @@
     <meta name="keywords" content="Gaming, Game Development, Studio">
     <meta name="author" content="Yakov Iron">
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
-    
-    
+
+
     <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
 
     <link rel="stylesheet" href="/css/encoder.css">
@@ -18,8 +18,12 @@
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!"
+        data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     <!--<script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the home page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>-->
 </head>
@@ -27,10 +31,9 @@
 <body>
     <title>Yaki's Tools | Text Encoder/Decoder</title>
 
-    </body>   
     <!-- HEADER -->
     <header class="header">
-        <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
+        <a href="/"><img src="/assets/PlainLogo.png" class="nav-logo"></a>
         <nav class="navbar">
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -52,56 +55,74 @@
                 <span class="bar"></span>
             </div>
         </nav>
-    <script src="/javascript/responsive-header.js"></script>
-    </header> 
+        <script src="/javascript/responsive-header.js"></script>
+    </header>
     <span style="margin-top: 5%;"></span>
     <h1>Text Encoder/Decoder</h1>
     <textarea id="inputText" placeholder="Enter text..."></textarea>
     <div>
-      <button onclick="encodeText()">Encode</button>
-      <button onclick="decodeText()">Decode</button>
+        <button onclick="encodeText()">Encode</button>
+        <button onclick="decodeText()">Decode</button>
     </div>
     <div>
-      <label for="encodingType">Encoding Type:</label>
-      <select id="encodingType">
-        <option value="base32">Base32</option>
-        <option value="base64">Base64</option>
-        <option value="url">URL</option>
-        <option value="hex">Hexadecimal</option>
-        <option value="rot13">ROT13</option>
-        <option value="caesar">Caesar Cipher</option>
-        <option value="morse">Morse Code</option>
-      </select>
+        <label for="encodingType">Encoding Type:</label>
+        <select id="encodingType" onchange="togglePlayButton()">
+            <option value="base32">Base32</option>
+            <option value="base64">Base64</option>
+            <option value="url">URL</option>
+            <option value="hex">Hexadecimal</option>
+            <option value="rot13">ROT13</option>
+            <option value="caesar">Caesar Cipher</option>
+            <option value="morse">Morse Code</option>
+        </select>
     </div>
     <textarea id="outputText" placeholder="Encoded/Decoded text will appear here..." readonly></textarea>
+    <button id="playMorseButton" style="display: none;" onclick="playMorse()">Play Morse</button>
     <!-- FOOTER -->
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
                 <a href="https://www.twitter.com/yakikaki69/"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/yakikaki_/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UC7vtYQkWnHMOxuHxsWvjo9g"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.youtube.com/channel/UC7vtYQkWnHMOxuHxsWvjo9g"><i
+                        class="fa-brands fa-youtube"></i></a>
                 <a href="https://www.discord.gg/hFUX6R2kuU"><i class="fa-brands fa-discord"></i></a>
-            </div>  
+            </div>
 
-           
+
             <div class="footerNav">
             </div>
-            
+
             <div class="footerBottom">
-                    <p>Copyright &copy;2022-2023 <span class="company">YakiStudios</span></p>
-            
+                <p>Copyright &copy;2022-2023 <span class="company">YakiStudios</span></p>
+
             </div>
-            <div class="socialIcons"><a href="mailto:businessyakikaki@gmail.com"><i class="fa-solid fa-envelope"></i></a> <span style="color: white; margin-top: 30px"><a href="mailto:businessyakikaki@gmail.com" style="background-color:transparent; color:white">Contact</a></span>
+            <div class="socialIcons"><a href="mailto:businessyakikaki@gmail.com"><i
+                        class="fa-solid fa-envelope"></i></a> <span style="color: white; margin-top: 30px"><a
+                        href="mailto:businessyakikaki@gmail.com"
+                        style="background-color:transparent; color:white">Contact</a></span>
             </div>
         </div>
     </footer>
 
 
     <script src="/javascript/encoder-decoder.js"></script>
-    
+    <script src="/javascript/Tone.min.js"></script>
+    <script src="/javascript/morse-code-generator.js"></script>
+
+    <script>
+        function togglePlayButton() {
+            var selectBox = document.getElementById("encodingType");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var playMorseButton = document.getElementById("playMorseButton");
+            if (selectedValue === "morse") {
+                playMorseButton.style.display = "block";
+            } else {
+                playMorseButton.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
-
-
-

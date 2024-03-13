@@ -162,7 +162,7 @@ function morseToText(morse) {
     return text.trim();
 }
 
-cMORSE_CODE = {
+MORSE_CODE = {
     'a': '.-',
     'b': '-...', 
     'c': '-.-.', 
