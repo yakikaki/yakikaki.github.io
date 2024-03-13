@@ -8,7 +8,7 @@
     <meta name="author" content="Yakov Iron">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>YakiKaki, the site</title>
+    <title>Tools by YakiKaki</title>
     
     <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
     <link rel="stylesheet" href="/css/blogs.css">
@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     
-    <script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the Vendy-TOS page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>
+    <script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the Projects page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>
+
 
 </head>
 
@@ -29,7 +29,7 @@
     <!-- HEADER -->
     <header class="header">
         
-        <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
+        <a href="./" ><img src= "assets/PlainLogo.png" class="nav-logo"></a>
         <nav class="navbar">
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -52,11 +52,29 @@
             </div>
         </nav>
     <script src="/javascript/responsive-header.js"></script>
-    </header>  
+    </header> 
+
     <div class="center-container">  
-    <h1>Vendy Bot - Terms of Service</h1>
-    <p>this will be the txt</p>
-    </div> 
+    <h1><span style="font-size: larger;">Tools</h1>
+        <br>
+    <h2>This page showcases all of the tools created by YakiKaki!</h2>
+    <br>
+    <br>
+    <div class="projectsContainer">
+        <!-- Tools Block 1 -->
+        <a href="tools/planning-board">
+            <div class="projectBlock">
+                <img src="assets/NoImage.png" alt="Project Image" class="projectImage" style="max-width: 100%">
+                <div class="projectContent">
+                    <div class="projectTitle">Planning Board</div>
+                    <div class="projectDescription">A Simple planning board used to manage projects</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    
+    </div>
     <!-- FOOTER -->
     <footer>
         <div class="footerContainer">
