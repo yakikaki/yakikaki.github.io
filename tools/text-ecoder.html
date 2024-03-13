@@ -11,7 +11,7 @@
     
     <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
 
-    <link rel="stylesheet" href="/css/planning.css">
+    <link rel="stylesheet" href="/css/encoder.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/layout.css">
@@ -21,12 +21,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
-    
     <!--<script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the home page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>-->
 </head>
 
 <body>
-    <title>Yaki's Tools | Planning Board</title>
+    <title>Yaki's Tools | Text Encoder/Decoder</title>
 
     </body>   
     <!-- HEADER -->
@@ -55,45 +54,26 @@
         </nav>
     <script src="/javascript/responsive-header.js"></script>
     </header> 
-    <div class="modal" id="modal1">
-        <div class="modal__dialog">
-            <header class="modal__header">
-                Write a new task and press the button or 'enter' to add it! 
-                <button class="modal__close" data-close>X</button>
-            </header>
-            <section class="modal__content">
-                <!-- ALERT -->
-                <div id="alert__empty"></div>
-                <form action="">
-                    <label for="todo1">Task details:</label>
-                    <input type="text" id="todo1" name="todo1" autofocus />
-
-                    <button id="add__task">Add task</button>
-                </form>
-            </section>
-        </div>
+    <span style="margin-top: 5%;"></span>
+    <h1>Text Encoder/Decoder</h1>
+    <textarea id="inputText" placeholder="Enter text..."></textarea>
+    <div>
+      <button onclick="encodeText()">Encode</button>
+      <button onclick="decodeText()">Decode</button>
     </div>
-
-    <main>
-        <div class="container">
-            <!-- NAV BAR -->
-           
-
-            <!-- MAIN CONTENT -->
-            <div class="to-do dropzone">
-                <h3>To-Do</h3>
-                <button class="add-todo" data-open="modal1">+ Add New Task</button>
-                <div class="container__todo card" draggable="true" style="display: none">Example</div>
-            </div>
-            <div class="doing dropzone">
-                <h3>In Work</h3>
-            </div>
-            <div class="done dropzone">
-                <h3>Complete</h3>
-            </div>
-        </div>
-    </main>
-
+    <div>
+      <label for="encodingType">Encoding Type:</label>
+      <select id="encodingType">
+        <option value="base32">Base32</option>
+        <option value="base64">Base64</option>
+        <option value="url">URL</option>
+        <option value="hex">Hexadecimal</option>
+        <option value="rot13">ROT13</option>
+        <option value="caesar">Caesar Cipher</option>
+        <option value="morse">Morse Code</option>
+      </select>
+    </div>
+    <textarea id="outputText" placeholder="Encoded/Decoded text will appear here..." readonly></textarea>
     <!-- FOOTER -->
     <footer>
         <div class="footerContainer">
@@ -118,7 +98,7 @@
     </footer>
 
 
-    <script src="/javascript/planning-board.js"></script>
+    <script src="/javascript/encoder-decoder.js"></script>
     
 </body>
 </html>
