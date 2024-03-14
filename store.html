@@ -11,23 +11,25 @@
     <title>YakiKaki, the site</title>
     
     <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
-    <link rel="stylesheet" href="/css/blogs.css">
+    <link rel="stylesheet" href="/css/store.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the Vendy-PoP page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>
-
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    
+    <script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the IronEngine page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>
+    
 </head>
 
 <body>
     <!-- HEADER -->
     <header class="header">
         
-        <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
+        <a href="./" ><img src= "assets/PlainLogo.png" class="nav-logo"></a>
         <nav class="navbar">
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -50,11 +52,21 @@
             </div>
         </nav>
     <script src="/javascript/responsive-header.js"></script>
-    </header>  
-    <div class="center-container">  
-    <h1>Vendy Bot - Privacy Policy</h1>
-    <p>this will be the txt</p>
-    </div>  
+    </header> 
+
+    <div class="store-container">  
+        <div class="menu-container">  
+            <button class="menu-button">Test 1</button>
+            
+            <button class="menu-button">Test 2</button>
+            
+            <button class="menu-button">Test 3</button>
+        </div>
+        <div class="menu-display">  
+            <h1>The store!</h1>
+            <h3>The store is currently undergoing constructions, be sure to check back soon!</h3>
+        </div>
+    </div>
     <!-- FOOTER -->
     <footer>
         <div class="footerContainer">
