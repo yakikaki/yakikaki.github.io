@@ -1,9 +1,59 @@
 body {
     min-height: 100vh;
-    background-color: rgb(2, 2, 2);
     font-family: 'League Spartan';
     display: flex;
     flex-direction: column;
+    background-color: rgb(var(--dark-gold-rgb)); /* Fallback background color */
+
+    /* Background animation */
+    animation: pan 180s linear infinite;
+    will-change: background-position;
+}
+
+body::before {
+    background: radial-gradient(circle, transparent 75%, rgb(var(--light-gold-rgb)));
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1; /* Corrected opacity value */
+    z-index: 2;
+
+}
+body::after {
+    content: ""; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+    opacity: 0.1; 
+    z-index: -1; 
+    background-size: 10%;
+    animation: pan 180s linear infinite;
+    will-change: background-position;
+    
+}
+
+:root {
+    --glow-rgb: 245 245 245;
+    
+    --light-gold-rgb: 2, 128, 245;
+    --dark-gold-rgb: 0, 93, 179;
+    
+    --primary-stripe-rgb: 50 50 50;
+    --secondary-stripe-rgb: 30 30 30;
+}
+
+@keyframes pan {
+0% {
+    background-position: 0% 0%;
+}
+100% {
+    background-position: 100% 0%;
+}
 }
 
 .header {

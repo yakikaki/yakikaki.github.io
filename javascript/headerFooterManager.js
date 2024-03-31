@@ -3,7 +3,7 @@ class SpecialHeader extends HTMLElement {
         this.innerHTML = `
             <link rel="stylesheet" href="/css/header.css">
             <header class="header">
-                <a href="./" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
+                <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
                 <nav class="navbar">
                     <ul class="nav-menu">
                         <li class="nav-item">
@@ -25,8 +25,8 @@ class SpecialHeader extends HTMLElement {
                         <span class="bar"></span>
                     </div>
                 </nav>
-            <script src="/javascript/responsive-header.js"></script>
             </header> 
+            <script src="/javascript/responsive-header.js"></script>
         `;
     }
 }
@@ -56,6 +56,7 @@ class SpecialFooter extends HTMLElement {
                     </div>
                 </div>
             </footer>
+            <script src="/javascript/css-js.js"></script>  
         `;
     }
 }
