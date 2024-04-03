@@ -10,6 +10,35 @@ body {
     will-change: background-position;
 }
 
+h1 {
+    
+    text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+}
+
+h2 {
+    
+    text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+}
+
+h3 {
+    
+    text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+}
+
+p {
+    
+    text-shadow: 3px 3px rgba(0, 2, 131, 0.699);
+}
+
+a {
+    
+    text-shadow: 1px 1px rgba(0, 2, 131, 0.699);
+}
+
+img {
+    filter: drop-shadow(7px 7px 1px rgba(0, 0, 0, 0.466));
+}
+
 body::before {
     background: radial-gradient(circle, transparent 75%, rgb(var(--light-gold-rgb)));
     position: absolute;
@@ -28,7 +57,7 @@ body::after {
     left: 0; 
     width: 100%; 
     height: 100%; 
-    background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+    background-image: url("/assets/yakistudioseamless.png");
     opacity: 0.1; 
     z-index: -1; 
     background-size: 10%;
@@ -82,6 +111,7 @@ body::after {
     text-decoration: none;
     border-radius: 20px;
     margin-right: 10px; 
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.466);
 }
 
 .btn:hover {

@@ -8,13 +8,57 @@
 
 .blog-content {
   display: flex;
-  display: block;
-  justify-content: center;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-top: 5%;
+  width: 100rem;
+  position: relative;
+  background-color: rgb(50 50 50);
+  border: 0.5rem solid rgb(30 30 30);
+  background-image: url("/assets/blogbg.png");
+  background-size: 200%;
+  box-shadow: 12px 25px 50px 12px rgb(0 0 0 / 0.5);
+  animation: move-background 50s linear infinite;
 }
 
+@keyframes move-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+.blog-wrapper
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  padding: 2rem;
+  
+}
+
+@media(max-height: 800px) {
+  #blog-wrapper {
+    height: 100vh;
+  }
+}
+
+@media(max-width: 1024px) {
+  .blog-content {
+    aspect-ratio: auto;
+    min-height: 500px;
+    width: 100%; 
+  }
+}
+@media(max-width: 728px) {
+  .blog-content {
+    min-height: 400px;
+  }
+}
 .blog-content li {
   color: white;
   font-weight: lighter;
@@ -23,15 +67,21 @@
 .text-container {
   padding: 0 20px;
   text-align: start;
+  font-size: 15px;
 }
 
 .blog-timestamp {
   font-size: 9px;
   color: lightgray;
-  font-weight: lighter;
+  font-weight: lighter
 }
 
 .text-container p {
   font-family: leaguespartan-regular;
+}
+
+
+.text-container h1 {
+  padding: 10px;
 }
 
