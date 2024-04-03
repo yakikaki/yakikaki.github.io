@@ -1,6 +1,6 @@
 body {
     min-height: 100vh;
-    font-family: 'League Spartan';
+    font-family: leaguespartan-bold;
     display: flex;
     flex-direction: column;
     background-color: rgb(var(--dark-gold-rgb)); /* Fallback background color */
