@@ -13,21 +13,25 @@ body {
 h1 {
     
     text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-bold;
 }
 
 h2 {
     
     text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-bold;
 }
 
 h3 {
     
     text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-bold;
 }
 
 p {
     
     text-shadow: 3px 3px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-regular;
 }
 
 a {

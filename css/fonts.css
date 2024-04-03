@@ -8,3 +8,8 @@
     font-family: leaguespartan-regular;
     src: url(/assets/league-spartan-font/LeagueSpartan-Regular.ttf);
 }
+
+@font-face {
+    font-family: leaguespartan-bold;
+    src: url(/assets/league-spartan-font/LeagueSpartan-Bold.ttf);
+}
