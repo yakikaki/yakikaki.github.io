@@ -49,7 +49,7 @@ class SpecialFooter extends HTMLElement {
                     </div>
                     
                     <div class="footerBottom">
-                            <p>Copyright &copy;2022-2023 <span class="company">YakiStudios</span></p>
+                            <p>Copyright &copy;2022-2024 <span class="company">YakiStudios</span></p>
                     
                     </div>
                     <div class="socialIcons"><a href="mailto:businessyakikaki@gmail.com"><i class="fa-solid fa-envelope"></i></a> <span style="color: white; margin-top: 30px"><a href="mailto:businessyakikaki@gmail.com" style="background-color:transparent; color:white">Contact</a></span>
