@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchBlogContent() {
-    fetch('blogs/') 
+    fetch('blogs') 
         .then(response => response.text())
         .then(text => {
             const parser = new DOMParser();
