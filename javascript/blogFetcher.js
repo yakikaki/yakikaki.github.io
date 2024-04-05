@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchBlogContent() {
-    fetch('blogs') 
+    fetch('https://raw.githubusercontent.com/yakikaki/yakikaki.github.io/main/blogs/') 
         .then(response => response.text())
         .then(text => {
             const parser = new DOMParser();
