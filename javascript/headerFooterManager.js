@@ -52,7 +52,7 @@ class SpecialFooter extends HTMLElement {
                             <p>Copyright &copy;2022-2024 <span class="company">YakiStudios</span></p>
                     
                     </div>
-                    <div class="socialIcons"><a href="mailto:businessyakikaki@gmail.com"><i class="fa-solid fa-envelope"></i></a> <span style="color: white; margin-top: 30px"><a href="mailto:businessyakikaki@gmail.com" style="background-color:transparent; color:white">Contact</a></span>
+                    <div class="socialIcons"><a href="mailto:business@yakistudios.com"><i class="fa-solid fa-envelope"></i></a> <span style="color: white; margin-top: 30px"><a href="mailto:businessyakikaki@gmail.com" style="background-color:transparent; color:white">Contact</a></span>
                     </div>
                 </div>
             </footer>
