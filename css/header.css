@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100 !important;;
+    z-index: 100 !important;
     background-color: rgb(var(--primary-stripe-rgb));
     
     clip-path: polygon(
@@ -64,7 +64,6 @@
     padding-left: 10px;
     text-decoration: none;
     font-weight: 700;
-    max-width: 7%;
 }
 
 .logo img {
@@ -157,16 +156,23 @@ a {
 
 
 .nav-logo {
-    max-width: 7%;
+    max-width: 10%;
+    z-index: 31;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-logo {
+        max-width: 20%; 
+        z-index: 31;
+    }
 }
 
 
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        z-index: 9999;
+        z-index: 29;
         left: -100%;
-        top: 5rem;
         flex-direction: column;
         background-color: rgb(0, 0, 0);
         width: 100%;
@@ -182,11 +188,13 @@ a {
 
     .nav-item {
         margin: 2.5rem 0;
+        z-index: 31;
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
+        z-index: 30;
     }
 
     .hamburger.active .bar:nth-child(2) {
