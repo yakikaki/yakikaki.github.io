@@ -124,6 +124,7 @@ body::after {
   }
 
   .inter-font {
+    font-family: leaguespartan-bold;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;

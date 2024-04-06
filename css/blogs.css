@@ -155,3 +155,20 @@
   align-items: center;
   height: 100%; 
 }
+
+h2 {
+  margin: 20px 0px 20px 0px;
+}
+
+.blog-author {
+  margin: 0px 0px 10px 10px;
+}
+
+.blog-end::before {
+  content: "This is the end of the post, thanks for reading!";
+  display: block;
+  margin: 30px 00px 20px 0px;
+  color: white;
+  font-size: 13px;
+  font-family: leaguespartan-regular;
+}
