@@ -129,7 +129,9 @@
   padding: 10px;
   box-sizing: border-box;
 }
-
+a {
+  color: lightblue;
+}
 .blogTitle {
   font-size: 18px;
   margin-bottom: 5px;
@@ -166,6 +168,15 @@ h2 {
 
 .blog-end::before {
   content: "This is the end of the post, thanks for reading!";
+  display: block;
+  margin: 30px 00px 20px 0px;
+  color: white;
+  font-size: 13px;
+  font-family: leaguespartan-regular;
+}
+
+.blog-updating::before {
+  content: "This is the end of the post.. for now! this blog is still being updated";
   display: block;
   margin: 30px 00px 20px 0px;
   color: white;
