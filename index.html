@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     
     <title>YakiKaki, the site</title>
-    <link rel="icon" type="image/x-icon" href="assets/plainLogo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/css/blogs.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/fonts.css">
@@ -29,7 +29,6 @@
 </head>
 
 <body>
-    </body>
     <custom-header></custom-header>
 
     <!--  
@@ -43,11 +42,30 @@ There's no reason for you to go through the source code of this website.
         <div style="align-items: center; display: flex; justify-content: center; font-size:170%; margin-top:10px;">
             <h1 style="color: white;-webkit-text-stroke-width: 1.5px;-webkit-text-stroke-color: black;">The Website</h1>
         </div>
-        <div style="align-items: center; display: flex; justify-content: center; margin-top:50px;">
-            <a href="/ironengine" class="btn">IronEngine</a>
-            <a href="/blogs" class="btn">To my dev logs!</a>
-            <a href="https://yakikaki.sayout.net" class="btn">Send me a question!</a>
+
+        <div id="modal-actions">
+                
+            <button type="button" class="modal-action" onclick="redirectToIronEngine()">
+                <div class="modal-action-pattern"></div>
+                <div class="modal-action-fade"></div>
+                <span class="modal-action-text inter-font">IronEngine</span> 
+            </button>
+
+            <button type="button" class="modal-action" onclick="redirectToBlog()">
+                <div class="modal-action-pattern"></div>
+                <div class="modal-action-fade"></div>
+                <span class="modal-action-text inter-font">To My Dev blogs!</span>
+            </button>
+
+            <button type="button" class="modal-action" onclick="redirectToSayout()">
+                <div class="modal-action-pattern"></div>
+                <div class="modal-action-fade"></div>
+                <span class="modal-action-text inter-font">Send me a question</span> 
+            </button>
+            
         </div>
+
+
         
     </div>
     <span style="margin-top: 13%;"></span>
@@ -55,8 +73,22 @@ There's no reason for you to go through the source code of this website.
     <custom-footer></custom-footer>
 
     <script src="/javascript/headerFooterManager.js"></script>  
+    
 </body>
 </html>
+
+<script>
+    function redirectToBlog() {
+        window.location.href = "/blogs"; 
+    }
+
+    function redirectToIronEngine() {
+        window.location.href = "/ironengine";
+    }
+    function redirectToSayout() {
+        window.location.href = "https://yakikaki.sayout.net";
+    }
+</script>
 
 
 

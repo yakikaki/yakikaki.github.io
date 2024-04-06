@@ -107,17 +107,125 @@ body::after {
     padding: 70px 30px 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #808080; 
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    margin-right: 10px; 
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.466);
-}
+#modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3%;
+  }
+  
+  @media(max-width: 1024px) {
+    #modal-actions {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+  }
 
-.btn:hover {
-    background-color: #606060; 
-}
+  .inter-font {
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+  
+  .modal-action {
+    width: 16rem;
+    padding: 0.85rem;
+    position: relative;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    outline: 0.2rem solid white;
+    outline-offset: 0.2rem;
+    overflow: hidden;
+  }
+  
+  @media(max-width: 1024px) {
+    .modal-action {
+      width: 100%;
+      max-width: 400px;
+    } 
+  }
+  
+  .modal-action:is(:hover, :focus-visible) {  
+    background-color: rgb(253, 224, 71);
+  }
+  
+  .modal-action:is(:hover, :focus-visible) .modal-action-fade,
+  .modal-action:is(:hover, :focus-visible) .modal-action-pattern {  
+    display: block; 
+  }
+  
+  
+  .modal-action:is(:hover, :focus-visible) .modal-action-text-letter {
+    animation: bounce infinite;
+  }
+  
+  .modal-action-fade,
+  .modal-action-pattern {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  
+  .modal-action-fade {  
+    z-index: 1;
+    background: linear-gradient(to left, rgb(253, 224, 71), transparent 60%);
+  }
+  
+  .modal-action-pattern {
+    background-image: radial-gradient(
+      rgb(255 255 255 / 0.6) 30%, 
+      transparent 30%
+    );
+    background-position: 0% 0%;
+    background-size: 10px 10px;
+    animation: move-background 50s linear infinite;
+    transform: skew(-15deg, 0deg);
+  }
+  
+  .modal-action-text {
+    position: relative;
+    z-index: 2; 
+    color: black;
+    font-size: 1.25rem;
+  }
+  
+  .modal-action-text-letter {
+    display: inline-flex;
+    position: relative;
+  }
+  
+  @keyframes move-background {
+    0% {
+      background-position: 0% 0%;
+    }
+    
+    100% {
+      background-position: -100% 0%;
+    }
+  }
+
+@keyframes bounce {
+    0%, 20%, 100% {
+      translate: 0% 0%;
+    }
+    
+    10% {
+      translate: 0% -12%;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 3%, 100% {
+      scale: 1 1;
+    }
+    
+    1.5% {
+      scale: 1 0;
+    }
+  }

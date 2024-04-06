@@ -1,7 +1,14 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
+        // Create a <link> element for the CSS file
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/css/header.css';
+        // Append the <link> element to the head
+        document.head.appendChild(link);
+        
+        // Create the header HTML content
         this.innerHTML = `
-            <link rel="stylesheet" href="/css/header.css">
             <header class="header">
                 <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
                 <nav class="navbar">
@@ -25,9 +32,13 @@ class SpecialHeader extends HTMLElement {
                         <span class="bar"></span>
                     </div>
                 </nav>
-            </header> 
-            <script src="/javascript/responsive-header.js"></script>
-        `;
+            </header>`;
+        
+        // Create a <script> element for the JavaScript file
+        const script = document.createElement('script');
+        script.src = '/javascript/responsive-header.js';
+        // Append the <script> element to the head
+        document.head.appendChild(script);
     }
 }
 

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 100 !important;;
     background-color: rgb(var(--primary-stripe-rgb));
     
     clip-path: polygon(
@@ -164,16 +164,16 @@ a {
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
+        z-index: 9999;
         left: -100%;
         top: 5rem;
         flex-direction: column;
-        background-color: rgb(121, 121, 121);
+        background-color: rgb(0, 0, 0);
         width: 100%;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
     .nav-menu.active {
