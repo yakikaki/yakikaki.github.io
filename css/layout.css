@@ -3,6 +3,7 @@ body {
     font-family: leaguespartan-bold;
     display: flex;
     flex-direction: column;
+    z-index: -1 !important; 
     background-color: rgb(var(--dark-gold-rgb)); /* Fallback background color */
 
     /* Background animation */
@@ -50,6 +51,7 @@ body::before {
     top: 0px;
     width: 100%;
     height: 100%;
+    z-index: -1; 
     opacity: 0.1; /* Corrected opacity value */
     z-index: 2;
 
@@ -100,7 +102,7 @@ body::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 99;
 }
 
 .footerContainer {

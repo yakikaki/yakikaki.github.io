@@ -1,3 +1,7 @@
+body {
+    z-index: 100;
+}
+
 .header {
     position:sticky !important;
     top: 0;
@@ -142,6 +146,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 
 .nav-item {
@@ -173,13 +178,16 @@ a {
         position: fixed;
         z-index: 29;
         left: -100%;
-        flex-direction: column;
-        background-color: rgb(0, 0, 0);
-        width: 100%;
+        flex-direction: row;
+        margin: 4%;
+        background-color: rgb(82, 82, 82);
+        width: 91%;
+        height: 8%;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        
     }
 
     .nav-menu.active {
@@ -187,14 +195,16 @@ a {
     }
 
     .nav-item {
-        margin: 2.5rem 0;
+        margin-right: 4%;
         z-index: 31;
+        gap:  10px;
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
         z-index: 30;
+        
     }
 
     .hamburger.active .bar:nth-child(2) {
