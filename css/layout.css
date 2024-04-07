@@ -298,3 +298,9 @@ body::after {
       top: 5px;
   }
 }
+
+
+#explosionGif {
+  display: none; 
+  position: absolute;
+}
