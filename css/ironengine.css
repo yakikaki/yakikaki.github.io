@@ -1,0 +1,22 @@
+div.strip {
+  width: 100%;
+  height: 500px;
+  border-bottom: 1px solid #001cbd; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.strip-content {
+  margin: 5%;
+}
+
+.big-title {
+  font-family: leaguespartan-bold;
+  font-size: 60px;
+  margin-top: 20px;
+  max-width: 50%;
+}
+
+.description-strip {
+  margin-top: 20px;
+  max-width: 50%;
+}

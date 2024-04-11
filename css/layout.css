@@ -115,6 +115,12 @@ body::after {
     gap: 2rem;
     margin-top: 3%;
   }
+
+  #modal-actions-2 {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3%;
+  }
   
   @media(max-width: 1024px) {
     #modal-actions {
@@ -144,6 +150,19 @@ body::after {
     overflow: hidden;
   }
   
+  .modal-action-disabled {
+    width: 16rem;
+    padding: 0.85rem;
+    position: relative;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    outline: 0.2rem solid grey;
+    outline-offset: 0.2rem;
+    overflow: hidden;
+    background-color: rgba(155, 155, 155, 0.849);
+  }
+
   @media(max-width: 1024px) {
     .modal-action {
       width: 100%;
