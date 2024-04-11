@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/vendycss/bootsrap.min.css" rel="stylesheet">
-    <link href="/css/vendycss/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
     <link href="/css/fonts.css" rel="stylesheet">
     <link href="/css/header.css" rel="stylesheet">
     <link href="/css/vendycss/commands.css" rel="stylesheet">
@@ -20,32 +21,7 @@
 
 <body>
      <!-- HEADER -->
-     <header class="header">
-        
-        <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="/store" class="nav-link">Store</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/tools" class="nav-link">Tools</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/ironengine" class="nav-link">IronEngine</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    <script src="/javascript/responsive-header.js"></script>
-    </header>  
+     <custom-header></custom-header>
 
     <div class="container">
         <section style="margin-top: 9%;">
@@ -72,19 +48,19 @@
             <div class="col-md-4 my-2">
                 <div class="card p-3">
                     <br>
-                    <h5>Select Commands Category</h5>
+                    <h5 style="color:white;">Select Commands Category</h5>
                     <hr>
-                    <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class="fad fa-icons ttt"></i>&nbsp; All Commands</button>
+                    <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class="fas fa-house ttt"></i>&nbsp; All Commands</button>
                     
-                    <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp; Moderation Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gears ttt'></i>&nbsp; Moderation Commands</button>
                 
-                    <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-globe-europe ttt'></i>&nbsp; phobies Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-ghost ttt'></i>&nbsp; phobies Commands</button>
                 
-                    <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; Economy Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-building-columns ttt'></i>&nbsp;&nbsp; Economy Commands</button>
                 
-                    <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; utility Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-wrench ttt'></i>&nbsp;&nbsp; utility Commands</button>
 
-                    <button onclick="active(this)" id="CategoryBtn4" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; misc Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn4" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-paper-plane ttt'></i>&nbsp;&nbsp; misc Commands</button>
                     <hr>
                 </div>
             </div>
@@ -186,46 +162,8 @@
                             </div>
                         
                             
-                            <div class="accordion accordion-flush mt-2" id="ping">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fping">
-                                             /ping&nbsp; <span class="command-descreption">- Get bot&#39;s host server status &amp; latency</span>
-                                        </button>
-                                    </h2>
-                                    <div id="fping" class="accordion-collapse collapse" data-bs-parent="#ping">
-                                        <div class="accordion-body">
-                                            <span>Usage Examples:</span> <br />
-                                            <span class="examples">
-                                                
-                                                    /ping
-                                                
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         
-                            
-                            <div class="accordion accordion-flush mt-2" id="invite">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finvite">
-                                             /invite&nbsp; <span class="command-descreption">- Invite bot to your server</span>
-                                        </button>
-                                    </h2>
-                                    <div id="finvite" class="accordion-collapse collapse" data-bs-parent="#invite">
-                                        <div class="accordion-body">
-                                            <span>Usage Examples:</span> <br />
-                                            <span class="examples">
-                                                
-                                                    /invite
-                                                
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         
                     </div>
                 
@@ -259,46 +197,89 @@
                     <div class="commands-section" id="Category3">
                         
                             
-                            <div class="accordion accordion-flush mt-2" id="reactionrole">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freactionrole">
-                                            <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /reactionrole&nbsp; <span class="command-descreption">- start the setup process for creating a reaction role</span>
-                                        </button>
-                                    </h2>
-                                    <div id="freactionrole" class="accordion-collapse collapse" data-bs-parent="#reactionrole">
-                                        <div class="accordion-body">
-                                            <span>Usage Examples:</span> <br />
-                                            <span class="examples">
-                                                
-                                                    /reactionrole
-                                                
-                                            </span>
-                                        </div>
+                        <div class="accordion accordion-flush mt-2" id="echo">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fecho">
+                                         /echo&nbsp; <span class="command-descreption">- Send a message to a specific channel</span>
+                                    </button>
+                                </h2>
+                                <div id="fecho" class="accordion-collapse collapse" data-bs-parent="#echo">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /echo channel:#general message:Heyy this is your local bot speaking!
+                                            
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                        
+                        </div>
+
+
+                        <div class="accordion accordion-flush mt-2" id="embed">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fembed">
+                                         /embed&nbsp; <span class="command-descreption">- Create and send a custom embed</span>
+                                    </button>
+                                </h2>
+                                <div id="fembed" class="accordion-collapse collapse" data-bs-parent="#embed">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /embed title:This is an embed description:The embed description color:#fff channel:#fart-channel
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion accordion-flush mt-2" id="invite">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finvite">
+                                         /invite&nbsp; <span class="command-descreption">- Sends an invite URL for the bot</span>
+                                    </button>
+                                </h2>
+                                <div id="finvite" class="accordion-collapse collapse" data-bs-parent="#invite">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /invite
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion accordion-flush mt-2" id="ping">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fping">
+                                         /ping&nbsp; <span class="command-descreption">- Get bot&#39;s host server status &amp; latency</span>
+                                    </button>
+                                </h2>
+                                <div id="fping" class="accordion-collapse collapse" data-bs-parent="#ping">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /ping
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                             
-                            <div class="accordion accordion-flush mt-2" id="slowmode">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fslowmode">
-                                            <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /slowmode&nbsp; <span class="command-descreption">- add slowmode for a channel</span>
-                                        </button>
-                                    </h2>
-                                    <div id="fslowmode" class="accordion-collapse collapse" data-bs-parent="#slowmode">
-                                        <div class="accordion-body">
-                                            <span>Usage Examples:</span> <br />
-                                            <span class="examples">
-                                                
-                                                    /slowmode :time
-                                                
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         
                     </div>
                 
@@ -328,6 +309,9 @@
             
                 document.getElementById("CategoryBtn3").classList.remove("active");
                 document.getElementById("Category3").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn4").classList.remove("active");
+                document.getElementById("Category3").setAttribute("hidden", "");
             
             elm.classList.add("active");
             if(elm.id.replace("CategoryBtn", "") == "All"){
@@ -339,6 +323,8 @@
                     document.getElementById("Category2").removeAttribute("hidden");
                 
                     document.getElementById("Category3").removeAttribute("hidden");
+
+                    document.getElementById("Category4").removeAttribute("hidden");
                 
             }else{
                 document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
@@ -365,6 +351,7 @@
 
     <script src="/javascript/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/javascript/headerFooterManager.js"></script>  
 </body>
 
 </html>
