@@ -1,0 +1,55 @@
+.store-container {
+    border: 2px solid rgb(123, 188, 207);
+    box-sizing: border-box;
+    width: 98%;
+    margin-left: 1%;
+    height: 90%;
+    display: flex
+}
+
+.supporters {
+    width: 75%;
+    margin: 0.5%;
+    height: 90%;
+}
+
+.sidebar {
+    box-sizing: border-box;
+    width: 25%;
+    display: block; 
+    text-align: center;
+    margin: 0.5%;
+    padding: 1%; 
+    height: 90%;
+}
+
+.sidebar-content {
+    list-style-type: disc; 
+    display: block; 
+    text-align: center;
+    padding: 5%;
+}
+
+.supporter-profile {
+    border: 2px solid rgb(35, 68, 255);
+    width: 40%;
+    display: block; 
+    padding: 1% 2%; 
+    margin: 5% 1%;
+    background-color: #0495f5;
+    border-radius: 50px;
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+}
+
+.menu-button {
+    border: 2px solid white;
+    width: 98%;
+    display: block; 
+    text-align: center;
+    padding: 5%; 
+    margin: 5% 1%; 
+    background-color: #cccccc00; 
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+}
