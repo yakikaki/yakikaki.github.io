@@ -14,7 +14,7 @@ class SpecialHeader extends HTMLElement {
                 <nav class="navbar">
                     <ul class="nav-menu">
                         <li class="nav-item">
-                            <a href="/store" class="nav-link">Store</a>
+                            <a href="/gallery" class="nav-link">Gallery</a>
                         </li>
                         <li class="nav-item">
                             <a href="/tools" class="nav-link">Tools</a>
