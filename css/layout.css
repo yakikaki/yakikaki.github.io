@@ -1,0 +1,325 @@
+body {
+    min-height: 100vh;
+    font-family: leaguespartan-bold;
+    display: flex;
+    flex-direction: column;
+    z-index: -1 !important; 
+    background-color: rgb(var(--dark-gold-rgb)); /* Fallback background color */
+
+    /* Background animation */
+    animation: pan 180s linear infinite;
+    will-change: background-position;
+}
+
+h1 {
+    
+    text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-bold;
+}
+
+h2 {
+    
+    text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-bold;
+}
+
+h3 {
+    
+    text-shadow: 4px 4px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-bold;
+}
+
+p {
+    
+    text-shadow: 3px 3px rgba(0, 2, 131, 0.699);
+    font-family: leaguespartan-regular;
+}
+
+a {
+    
+    text-shadow: 1px 1px rgba(0, 2, 131, 0.699);
+}
+
+img {
+    filter: drop-shadow(7px 7px 1px rgba(0, 0, 0, 0.466));
+}
+
+body::before {
+    background: radial-gradient(circle, transparent 75%, rgb(var(--light-gold-rgb)));
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    opacity: 0.1; /* Corrected opacity value */
+    z-index: 2;
+
+}
+body::after {
+    content: ""; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-image: url("/assets/yakistudioseamless.png");
+    opacity: 0.1; 
+    z-index: -1; 
+    background-size: 10%;
+    animation: pan 180s linear infinite;
+    will-change: background-position;
+    
+}
+
+:root {
+    --glow-rgb: 245 245 245;
+    
+    --light-gold-rgb: 2, 128, 245;
+    --dark-gold-rgb: 0, 93, 179;
+    
+    --primary-stripe-rgb: 50 50 50;
+    --secondary-stripe-rgb: 30 30 30;
+}
+
+@keyframes pan {
+0% {
+    background-position: 0% 0%;
+}
+100% {
+    background-position: 100% 0%;
+}
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4%;
+    padding: 25px 10px 20px;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.footerContainer {
+    padding: 70px 30px 20px;
+}
+
+#modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3%;
+  }
+
+  #modal-actions-2 {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3%;
+  }
+  
+  @media(max-width: 1024px) {
+    #modal-actions {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .inter-font {
+    font-family: leaguespartan-bold;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+  
+  .modal-action {
+    width: 16rem;
+    padding: 0.85rem;
+    position: relative;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    outline: 0.2rem solid white;
+    outline-offset: 0.2rem;
+    overflow: hidden;
+  }
+  
+  .modal-action-disabled {
+    width: 16rem;
+    padding: 0.85rem;
+    position: relative;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    outline: 0.2rem solid grey;
+    outline-offset: 0.2rem;
+    overflow: hidden;
+    background-color: rgba(155, 155, 155, 0.849);
+  }
+
+  @media(max-width: 1024px) {
+    .modal-action {
+      width: 100%;
+      max-width: 400px;
+    } 
+  }
+  
+  .modal-action:is(:hover, :focus-visible) {  
+    background-color: rgb(253, 224, 71);
+  }
+  
+  .modal-action:is(:hover, :focus-visible) .modal-action-fade,
+  .modal-action:is(:hover, :focus-visible) .modal-action-pattern {  
+    display: block; 
+  }
+  
+  
+  .modal-action:is(:hover, :focus-visible) .modal-action-text-letter {
+    animation: bounce infinite;
+  }
+  
+  .modal-action-fade,
+  .modal-action-pattern {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  
+  .modal-action-fade {  
+    z-index: 1;
+    background: linear-gradient(to left, rgb(253, 224, 71), transparent 60%);
+  }
+  
+  .modal-action-pattern {
+    background-image: radial-gradient(
+      rgb(255 255 255 / 0.6) 30%, 
+      transparent 30%
+    );
+    background-position: 0% 0%;
+    background-size: 10px 10px;
+    animation: move-background 50s linear infinite;
+    transform: skew(-15deg, 0deg);
+  }
+  
+  .modal-action-text {
+    position: relative;
+    z-index: 2; 
+    color: black;
+    font-size: 1.25rem;
+  }
+  
+  .modal-action-text-letter {
+    display: inline-flex;
+    position: relative;
+  }
+  
+  @keyframes move-background {
+    0% {
+      background-position: 0% 0%;
+    }
+    
+    100% {
+      background-position: -100% 0%;
+    }
+  }
+
+@keyframes bounce {
+    0%, 20%, 100% {
+      translate: 0% 0%;
+    }
+    
+    10% {
+      translate: 0% -12%;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 3%, 100% {
+      scale: 1 1;
+    }
+    
+    1.5% {
+      scale: 1 0;
+    }
+  }
+
+
+  .news-container {
+    width: 50%; 
+    height: 200px; 
+    margin: 0 auto;
+    top: 20px;
+    bottom: 20px;
+    background-color: rgba(46, 179, 255, 0.637);
+    border: 2px solid rgb(56, 59, 255); 
+    box-shadow: 2px 2px;
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    border-radius: 20px;
+  }
+  
+  .news-title {
+    position: absolute; 
+    left: 50%;
+    top: -20px;
+    font-size: 30px;
+    color: white;
+    transform: translateX(-50%); 
+    animation: bobbing 3s infinite alternate; 
+    font-style: italic;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .news-content {
+    text-align: center; 
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .news-content a {
+    color: lightblue !important;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .news-content {
+      margin-top: 50px;
+    }
+
+    .news-container {
+      margin-bottom: 40px;
+      width: 90%;
+    }
+  }
+
+@keyframes bobbing {
+  0% {
+      top: 5px;
+  }
+  50% {
+      top: 10px; 
+  }
+  100% {
+      top: 5px;
+  }
+}
+
+
+#explosionGif {
+  display: none; 
+  position: absolute;
+}

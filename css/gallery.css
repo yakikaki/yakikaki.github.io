@@ -1,0 +1,167 @@
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: white;
+}
+
+.gallery-item {
+    position: relative; /* Ensure that absolute positioning works */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+}
+
+.gallery-item .title {
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+@keyframes growShrink {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.gallery-item .highlight-emoji {
+    position: absolute;
+    top: 10px;
+    left: 20px; 
+    font-size: 24px;
+    animation: growShrink 2s infinite;
+    transform: rotate(15deg); 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+    background-color: rgb(50, 50, 50);
+    border: 0.5rem solid rgb(30, 30, 30);
+    background-image: url("/assets/blogbg.png");
+    background-size: 200%;
+    color: white;
+    box-shadow: 12px 25px 50px 12px rgb(0 0 0 / 0.5);
+    animation: move-background 50s linear infinite;
+    margin: 10% auto;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.modal-content img {
+    max-width: 50%;
+    height: auto;
+}
+
+.modal-content .modal-text {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .modal-text h2 {
+    margin-top: 0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Title Styles */
+.Nebula-Title {
+    background: linear-gradient(to right, #ff6f61, #ffcc00, #ff6f61); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Galaxy-Title {
+    background: linear-gradient(to right, #2c3e50, #8e44ad, #2c3e50); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Misc-Title {
+    background: linear-gradient(to right, #000000, #ffffff, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}

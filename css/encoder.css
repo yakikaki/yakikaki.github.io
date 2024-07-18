@@ -1,0 +1,42 @@
+
+  .page-stuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  textarea {
+    width: 70%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .buttons button {
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  select {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="this site serves minimal purpose.">
+    <meta name="keywords" content="Gaming, Game Development, Studio">
+    <meta name="author" content="Yakov Iron">
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+    
+    <title>YakiKaki, the site</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/blogs.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+</head>
+
+<body>
+    <custom-header></custom-header>
+    <center>
+    <h1>Highlight!</h1>
+    <div class="gallery-item" onclick="openModal('assets/Gallery/lagoon_nebula.jpg', 'Title 8', 'Description 5')">
+        <img src="assets/Gallery/lagoon_nebula.jpg" alt="Image 5">
+        <div class="highlight-emoji">🎖️</div>
+        <div class="Nebula-Title">Lagoon Nebula</div>
+    </div>
+    <br>
+    <br>
+    <h1>Astrophotography Gallery</h1>
+    <div class="gallery-container">
+        <div class="gallery-item" onclick="openModal('assets/Gallery/cluster_duck.jpeg', 'Title 1', 'Description 1')">
+            <img src="assets/Gallery/cluster_duck.jpeg" alt="Image 1">
+            <div class="Galaxy-Title">Title 1</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/pinwheel_galaxy.jpg', 'Title 2', 'Description 2')">
+            <img src="assets/Gallery/pinwheel_galaxy.jpg" alt="Image 2">
+            <div class="Galaxy-Title">Title 2</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/whirlpool_galaxy.jpg', 'Title 3', 'Description 3')">
+            <img src="assets/Gallery/whirlpool_galaxy.jpg" alt="Image 3">
+            <div class="Galaxy-Title">Title 3</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/swan_nebula.jpg', 'Title 4', 'Description 4')">
+            <img src="assets/Gallery/swan_nebula.jpg" alt="Image 4">
+            <div class="Nebula-Title">Title 4</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/trifid_nebula.jpg', 'Title 5', 'Description 5')">
+            <img src="assets/Gallery/trifid_nebula.jpg" alt="Image 5">
+            <div class="Nebula-Title">Title 5</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/eagle_nebula.jpg', 'Title 6', 'Description 5')">
+            <img src="assets/Gallery/eagle_nebula.jpg" alt="Image 5">
+            <div class="Nebula-Title">Title 5</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/m13.jpg', 'Title 7', 'Description 5')">
+            <img src="assets/Gallery/m13.jpg" alt="Image 5">
+            <div class="Misc-Title">Title 5</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/lagoon_nebula.jpg', 'Title 8', 'Description 5')">
+            <img src="assets/Gallery/lagoon_nebula.jpg" alt="Image 5">
+            <div class="Nebula-Title">Title 5</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('assets/Gallery/eye_of_god.jpg', 'Title 9', 'Description 5')">
+            <img src="assets/Gallery/eye_of_god.jpg" alt="Image 5">
+            <div class="Galaxy-Title">Title 5</div>
+        </div>
+    </div>
+    </center>
+    <custom-footer></custom-footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Modal Image">
+            <div class="modal-text">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascript/headerFooterManager.js"></script>  
+    <script>
+        function openModal(imageSrc, title, description) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalDescription').textContent = description;
+            const modal = document.getElementById('myModal');
+            modal.classList.add('show');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.classList.remove('show');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target == modal) {
+                modal.classList.remove('show');
+            }
+        }
+    </script>
+</body>
+</html>

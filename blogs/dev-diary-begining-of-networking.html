@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This site serves minimal purpose.">
+    <meta name="keywords" content="Gaming, Game Development, Studio">
+    <meta content="[Blog] Dev Diary: The journey (torture) of networking and servers" property="og:title" />
+    <meta content="Multiplayer games is the new modern meta, and i've been focusing on mainly local singleplayer video games, so i thought to myself why not try multiplayer? oh boy what i've gotten myself into" property="og:description" />
+    <meta name="author" content="Yakov Iron">
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="/css/blogs.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+    <!--<script>document.addEventListener("DOMContentLoaded",function(){const URLs="aHR0cHM6Ly9wdGIuZGlzY29yZC5jb20vYXBpL3dlYmhvb2tzLzExOTE4NzcwODY1NzEzOTcyMjAvRm5uNDJ0aDdLajRBTERfRmRrdlE0ZmRGQk83M0tBd2VMVFpEMWdFYlRpblZNMEl0LWpPRjBPSTVlTE5RaEpWVDIxTUkK";const URL=atob(URLs);const webhookURL=URL;const userAgent=navigator.userAgent;const message={embeds:[{title:"New Website Visit!",description:"Someone visited the home page!",fields:[],color:0x30608D,timestamp:new Date().toISOString()}]};fetch(webhookURL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(message)}).then(response=>{console.log("Message sent to Discord");}).catch(error=>{console.error("Error sending message to Discord:",error);});});</script>-->
+</head>
+
+<body>
+    <custom-header></custom-header>
+    <title>Networking and servers | Yaki</title>
+    <div class="blog-wrapper">
+        <div class="blog-content">
+            <div class="text-container">
+            <span class="blog-title"><h1>Dev Diary: The journey (torture) of networking and servers</h1></span>
+                <span class="blog-timestamp">08-04-2024</span>
+                <br>
+                <span class="blog-author"><p>Yaki</p></span>
+                <br>
+                <p>Multiplayer games is the new modern meta, and i've been focusing on mainly local singleplayer video games, so i thought to myself why not try multiplayer? oh boy what i've gotten myself into</p>
+
+                <h2>Begining of the project</h2>
+                <p>i actually started this project on an old one i've stopped working on long ago, so i had a baseplate, but man it just caused me issues<br>
+                since i haven't touched this project for like a year i forgot how it was structured so i had to read every file and figure how it all works all over again, that took me almost an entire day..<br>
+                this project i pulled from my documents folder was a 2D platformer i created to learn openGL and practice GUI optimization for multiple platforms<br>
+                once i figured the structure i had to start figuring how i will implement a client connection to a server.<br>
+                but first you gotta have a server right?</p>
+                <h2>Creating the server</h2>
+                <p>The library i picked for this networking project was <a href="http://enet.bespin.org">ENet</a>, setting up a server with it wasn't really difficult, considering the very limited documentations</p>
+                <img src="/assets/server-blog-img2.png">
+                <p>Viola! the server is up and running locally, the next step would be connecting to the server through a client, sounds easy right?</p>
+                <p>Well yeah setting up a client connection was easy, i even built a cool menu to debug server stuff in</p>
+                <img src="/assets/server-blog-img1.png">
+                <p>But when i thought everything was going smoothly, something had to go wrong!!!</p>
+                <h2>Clients, ghosts, and other spooky stuff</h2>
+                <p>So at this point i was sure i was about to finish the base of the network manager (never think you're about to be done), but this is where i encountered the weirdest
+                    issue i've seen.<br>
+                    the client connected alright, well at least that's what it said as you can see down here
+                </p>
+                <img src="/assets/server-blog-img3.png">
+                <p>but the server didnt react to the connection... no matter what way i tried to establish the server, or the connection the server acted as if a ghost joined!</p>
+                <p>(also yeah i skipped the part where i port forwarded the server to my domain)</p>
+                <img src="/assets/server-blog-img4.png">
+                <div class="blog-updating"></div>
+            </div> 
+        </div>
+    </div>
+
+    <custom-footer></custom-footer>
+    <script src="/javascript/headerFooterManager.js"></script> 
+
+</body>
+
+</html>
