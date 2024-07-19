@@ -5,6 +5,7 @@ document.getElementById('suggestionForm').addEventListener('submit', async funct
     const title = document.getElementById('title').value;
     const category = document.getElementById('category').value;
     const description = document.getElementById('description').value;
+    const tag = document.getElementById('tag').value;
 
     const AuthKey = "NB2HI4DTHIXS6ZDJONRW64TEFZRW63JPMFYGSL3XMVRGQ33PNNZS6MJSGYZTSMRQG4ZDGNBQGQZDKOJUGMZC63TCNFHTA6LQLJKFMZSJOBMUKRTQNV4DMX2KO4WVKODMMFNDS4ZWM5XUU6LJMJIWGQTBMZCXQ2KSKNIHEZ3NO5BWIN3XI5KG4QKOGZLWGNDCLI======";
 
@@ -13,8 +14,12 @@ document.getElementById('suggestionForm').addEventListener('submit', async funct
     const payload = {
         embeds: [
             {
-                title: title,
+                title: `${tag} - New Form Submission!`,
                 fields: [
+                    {
+                        name: "Title",
+                        value: title
+                    },
                     {
                         name: "Name",
                         value: name
@@ -43,14 +48,14 @@ document.getElementById('suggestionForm').addEventListener('submit', async funct
         });
 
         if (response.ok) {
-            alert("Suggestion submitted successfully!");
+            alert("form submitted successfully!");
             document.getElementById('suggestionForm').reset();
         } else {
-            alert("Failed to submit suggestion.");
+            alert("Failed to submit form.");
         }
     } catch (error) {
-        console.error("Error submitting suggestion:", error);
-        alert("An error occurred while submitting your suggestion.");
+        console.error("Error submitting form:", error);
+        alert("An error occurred while submitting your form.");
     }
 });
 
