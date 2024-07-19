@@ -8,22 +8,50 @@
     <meta name="author" content="Yakov Iron">
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
     
-    <title>YakiKaki, the site</title>
+    <title>iHemo's Eye | Suggestions</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/css/blogs.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="YakiKaki" data-description="Support me on Buy me a coffee!" data-message="Support My work here!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
-
 </head>
 
 <body>
     <custom-header></custom-header>
-    <img src="/assets/elevator.png">
+    
+    <center>
+        <h1>iHemo's Eye suggestion form!</h1>
+        <h2>Want to help enhancing the moderation experience in The Lost Nemo? leave your suggestions for the moderation bot here!</h2>
+        <form id="suggestionForm" style="margin-top: 5%; margin-bottom: 17%;">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Leave empty to be anonymous">
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="iHemos Eye">iHemo's Eye</option>
+                    <option value="TLN Reimagined">TLN Reimagined</option>
+                </select>
+            </div>
+            <div>
+                <label for="description">Suggestion Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </center>
+
     <custom-footer></custom-footer>
 
     <script src="/javascript/headerFooterManager.js"></script>  
+    <script src="/javascript/forms.js"></script>
 </body>
 </html>
