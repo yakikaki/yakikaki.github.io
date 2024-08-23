@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="this site serves minimal purpose.">
+    <meta name="keywords" content="Gaming, Game Development, Studio">
+    <meta name="author" content="Yakov Iron">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Games | Midnight Motorist</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/store.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    
+    <style>
+    #game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-bottom: 10%;
+}
+
+#gameCanvas {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border: 2px solid #000;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    position: absolute;
+    bottom: -70px;
+}
+
+.button-group {
+    display: flex;
+}
+
+#left-right-buttons {
+    left: 10px;
+}
+
+#up-down-buttons {
+    right: 10px;
+}
+
+.control-button {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.control-button:hover {
+    background-color: #ddd;
+}
+
+.control-button:active {
+    background-color: #ccc;
+}
+
+#up {
+    border-radius: 5px 5px 0 0;
+}
+
+#down {
+    border-radius: 0 0 5px 5px;
+}
+
+#left {
+    border-radius: 5px 0 0 5px;
+}
+
+#right {
+    border-radius: 0 5px 5px 0;
+}
+@media (max-width: 600px) {
+    #button-container {
+        flex-direction: column;
+        bottom: 10px; /* Adjust this value if needed */
+        align-items: center;
+    }
+    
+    #left-right-buttons,
+    #up-down-buttons {
+        margin-bottom: 10px;
+    }
+
+    #left-right-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #up-down-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <custom-header></custom-header>
+
+    <h1 style="align-self: center; margin: 20px;">Drunk Driver</h1>
+
+    <div id="game-container">
+        <canvas id="gameCanvas" width="1000" height="600"></canvas>
+        <div id="button-container">
+            <div id="left-right-buttons" class="button-group">
+                <div id="left" class="control-button"><i class="fa-solid fa-arrow-left"></i></div>
+                <div id="right" class="control-button"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div id="up-down-buttons" class="button-group">
+                <div id="up" class="control-button"><i class="fa-solid fa-arrow-up"></i></div>
+                <div id="down" class="control-button"><i class="fa-solid fa-arrow-down"></i></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <audio id="backgroundMusic" src="/assets/drunk-driver/drunk-driver.mp3" loop></audio>
+    <audio id="collisionSound" src="/path/to/collision.mp3"></audio>
+    <audio id="pointSound" src="/assets/drunk-driver/splat.mp3"></audio>
+    <audio id="raceEndSound" src="/path/to/race_end.mp3"></audio>
+
+    <custom-footer></custom-footer>
+
+    <script src="/javascript/midnight-motorist.js"></script>
+    <script src="/javascript/headerFooterManager.js"></script>
+    <script>
+        // Movement button functionality
+        document.getElementById('up').addEventListener('mousedown', () => keysPressed['ArrowUp'] = true);
+        document.getElementById('down').addEventListener('mousedown', () => keysPressed['ArrowDown'] = true);
+        document.getElementById('left').addEventListener('mousedown', () => keysPressed['ArrowLeft'] = true);
+        document.getElementById('right').addEventListener('mousedown', () => keysPressed['ArrowRight'] = true);
+    
+        document.getElementById('up').addEventListener('mouseup', () => keysPressed['ArrowUp'] = false);
+        document.getElementById('down').addEventListener('mouseup', () => keysPressed['ArrowDown'] = false);
+        document.getElementById('left').addEventListener('mouseup', () => keysPressed['ArrowLeft'] = false);
+        document.getElementById('right').addEventListener('mouseup', () => keysPressed['ArrowRight'] = false);
+    
+        // Ensure the player stops moving when the mouse leaves the button area
+        document.getElementById('up').addEventListener('mouseleave', () => keysPressed['ArrowUp'] = false);
+        document.getElementById('down').addEventListener('mouseleave', () => keysPressed['ArrowDown'] = false);
+        document.getElementById('left').addEventListener('mouseleave', () => keysPressed['ArrowLeft'] = false);
+        document.getElementById('right').addEventListener('mouseleave', () => keysPressed['ArrowRight'] = false);
+    </script>
+</body>
+
+</html>
