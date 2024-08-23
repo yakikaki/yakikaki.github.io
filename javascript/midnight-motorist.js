@@ -52,6 +52,29 @@ backgroundMusic.play().catch(error => {
     console.error('Error playing the background music:', error);
 });
 
+const buttons = {
+    up: { x: 700, y: 510, width: 80, height: 80, text: '↑' },
+    down: { x: 830, y: 510, width: 80, height: 80, text: '↓' },
+    left: { x: 50, y: 510, width: 80, height: 80, text: '←' },
+    right: { x: 180, y: 510, width: 80, height: 80, text: '→' }
+};
+
+
+function drawButtons() {
+    context.font = '30px Arial';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    
+    for (const [key, button] of Object.entries(buttons)) {
+        context.fillStyle = 'lightgray';
+        context.fillRect(button.x, button.y, button.width, button.height);
+        context.strokeStyle = 'black';
+        context.strokeRect(button.x, button.y, button.width, button.height);
+        context.fillStyle = 'black';
+        context.fillText(button.text, button.x + button.width / 2, button.y + button.height / 2);
+    }
+}
+
 
 function drawPlayer() {
     if (player.sprite.complete) {
@@ -277,15 +300,15 @@ function checkRaceEndLine() {
 
 function update() {
     const now = Date.now();
-    const deltaTime = (now - lastTick) / 1000; // Delta time in seconds
+    const deltaTime = (now - lastTick) / 1000;
     lastTick = now;
 
     context.fillStyle = 'black';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     backgroundX -= backgroundSpeed;
-    roadSpeed = backgroundSpeed * 0.5; // Adjust roadSpeed dynamically
-    roadBackgroundX -= roadSpeed; // Update roadBackgroundX for slower scrolling dashed lines
+    roadSpeed = backgroundSpeed * 0.5;
+    roadBackgroundX -= roadSpeed;
 
     if (backgroundX <= -canvas.width) {
         backgroundX = 0;
@@ -316,8 +339,9 @@ function update() {
     drawPlayer();
     drawRaceEndLine();
     drawScore();
-    drawMPH(); 
-    drawKids()
+    drawMPH();
+    drawKids();
+    drawButtons();
 
     if (Math.floor(Math.random() * obstacleRate) === 0) {
         createObstacle();
@@ -330,21 +354,21 @@ function update() {
     if (raceEndLineX === -1 && Math.random() < 0.01) {
         createRaceEndLine();
     }
-    
+
     updateObstacles();
     updatePointsObstacles();
     checkCollision();
-    checkRaceEndLine(); 
+    checkRaceEndLine();
 
     if (collisionDetected) {
         const elapsedTime = Date.now() - player.spinStartTime;
         playSound('collisionSound');
         if (elapsedTime < player.spinDuration) {
-            player.spin = 1080 - (1080 * (elapsedTime / player.spinDuration)); 
+            player.spin = 1080 - (1080 * (elapsedTime / player.spinDuration));
         } else {
-            player.spin = 0; 
+            player.spin = 0;
             collisionDetected = false;
-            canMove = true; 
+            canMove = true;
         }
 
         backgroundSpeed -= speedRecoveryRate;
@@ -357,10 +381,33 @@ function update() {
 
     MPH = backgroundSpeed * 30;
 
-    score += scorePerSecond * deltaTime;
-
+    score++;
     requestAnimationFrame(update);
 }
+
+const fullscreenButton = document.getElementById('fullscreenButton');
+
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        canvas.requestFullscreen().catch(err => {
+            console.error(`Failed to enter fullscreen mode: ${err.message}`);
+        });
+    } else {
+        document.exitFullscreen().catch(err => {
+            console.error(`Failed to exit fullscreen mode: ${err.message}`);
+        });
+    }
+}
+
+fullscreenButton.addEventListener('click', toggleFullscreen);
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+document.addEventListener('fullscreenchange', resizeCanvas);
 
 document.addEventListener('keydown', (event) => {
     keysPressed[event.key] = true;
@@ -368,6 +415,32 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keyup', (event) => {
     keysPressed[event.key] = false;
+});
+
+canvas.addEventListener('mousedown', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    for (const [key, button] of Object.entries(buttons)) {
+        if (x >= button.x && x <= button.x + button.width &&
+            y >= button.y && y <= button.y + button.height) {
+            keysPressed[`Arrow${key.charAt(0).toUpperCase() + key.slice(1)}`] = true;
+        }
+    }
+});
+
+canvas.addEventListener('mouseup', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    for (const [key, button] of Object.entries(buttons)) {
+        if (x >= button.x && x <= button.x + button.width &&
+            y >= button.y && y <= button.y + button.height) {
+            keysPressed[`Arrow${key.charAt(0).toUpperCase() + key.slice(1)}`] = false;
+        }
+    }
 });
 
 update();

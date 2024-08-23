@@ -94,6 +94,22 @@
 #right {
     border-radius: 0 5px 5px 0;
 }
+
+#fullscreenButton {
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#fullscreenButton:hover {
+    background-color: #555;
+}
+
 @media (max-width: 600px) {
     #button-container {
         flex-direction: column;
@@ -126,18 +142,10 @@
 
     <div id="game-container">
         <canvas id="gameCanvas" width="1000" height="600"></canvas>
-        <div id="button-container">
-            <div id="left-right-buttons" class="button-group">
-                <div id="left" class="control-button"><i class="fa-solid fa-arrow-left"></i></div>
-                <div id="right" class="control-button"><i class="fa-solid fa-arrow-right"></i></div>
-            </div>
-            <div id="up-down-buttons" class="button-group">
-                <div id="up" class="control-button"><i class="fa-solid fa-arrow-up"></i></div>
-                <div id="down" class="control-button"><i class="fa-solid fa-arrow-down"></i></div>
-            </div>
-        </div>
     </div>
     
+    
+    <button id="fullscreenButton">Fullscreen</button>
 
     <audio id="backgroundMusic" src="/assets/drunk-driver/drunk-driver.mp3" loop></audio>
     <audio id="collisionSound" src="/path/to/collision.mp3"></audio>
