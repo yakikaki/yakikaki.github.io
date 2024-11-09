@@ -1,17 +1,14 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
-        // Create a <link> element for the CSS file
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = '/css/header.css';
-        // Append the <link> element to the head
         document.head.appendChild(link);
         
-        // Create the header HTML content
         this.innerHTML = `
             <header class="header">
                 <a href="/" ><img src= "/assets/PlainLogo.png" class="nav-logo"></a>
-                <nav class="navbar">
+                <nav class="navbar">    
                     <ul class="nav-menu">
                         <li class="nav-item">
                             <a href="/gallery" class="nav-link">Gallery</a>
@@ -31,14 +28,20 @@ class SpecialHeader extends HTMLElement {
                         <span class="bar"></span>
                         <span class="bar"></span>
                     </div>
+                    
+                <div class="elfsight-app-4daedc69-7fab-40d9-bfa8-026d19935813" data-elfsight-app-lazy style="margin-left: 10px; color: white;"></div>
                 </nav>
-            </header>`;
+            </header>       
+            `;
         
-        // Create a <script> element for the JavaScript file
         const script = document.createElement('script');
         script.src = '/javascript/responsive-header.js';
-        // Append the <script> element to the head
         document.head.appendChild(script);
+
+        const script2 = document.createElement('script');
+        script2.async = true;
+        script2.src = 'https://static.elfsight.com/platform/platform.js'
+        document.head.appendChild(script2);
     }
 }
 
